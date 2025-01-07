@@ -1,0 +1,17 @@
+<div class="relative">
+    <button  [@isOpen]="isOpen" (click)="isOpen = !isOpen" class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <nav class="menu" :class="{ 'hidden': !isOpen }">
+      <ul class="menu-list">
+        <li><a href="/" class="menu-item">Home</a></li>
+        <li><a href="/about" class="menu-item">About</a></li>
+        <li><a href="/projects" class="menu-item">Projects</a></li>
+        <li><a href="/skills" class="menu-item">Skills</a></li>
+        <li><a href="/contact" class="menu-item">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  

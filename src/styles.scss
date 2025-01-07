@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.item {
+  @apply text-white text-xl  xl:text-4xl lg:text-4xl md:text-4xl hover:bg-roxo px-2 py-1 block text-center;
+}
+
+nav.hidden.menu {
+  @apply absolute top-full left-0 bg-black w-full;
+}
+
+ul.space-y-2 li a {
+  @apply text-white hover:bg-roxo px-2 py-1 block;
+}
+
+.download {
+  @apply p-4 rounded-full bg-gradient-to-bl from-roxo via-indigo-600 to-indigo-900  hover:from-fundo hover:to-fundo border-2 border-fundo hover:border-roxo;
+}
+
+
+.contato{
+  @apply hover:bg-gradient-to-bl hover:from-roxo hover:via-indigo-600 hover:to-indigo-900 p-4 rounded-full border-2 border-roxo hover:border-fundo
+}
+
+.name{
+  @apply sm:mt-4 xl:text-5xl lg:text-5xl md:text-5xl text-roxo text-left flex flex-col items-center;
+}
+
+

@@ -1,0 +1,29 @@
+@keyframes border-gradient {
+    0% {
+      border-image-source: linear-gradient(0deg, #8257E6, #6B3FBB, #3E1E91);
+      box-shadow: 0 0 10px #8257E6, 0 0 20px #6B3FBB, 0 0 30px #3E1E91;
+    }
+    25% {
+      border-image-source: linear-gradient(90deg, #8257E6, #6B3FBB, #3E1E91);
+      box-shadow: 0 0 10px #8257E6, 0 0 20px #6B3FBB, 0 0 30px #3E1E91;
+    }
+    50% {
+      border-image-source: linear-gradient(180deg, #8257E6, #6B3FBB, #3E1E91);
+      box-shadow: 0 0 10px #8257E6, 0 0 20px #6B3FBB, 0 0 30px #3E1E91;
+    }
+    75% {
+      border-image-source: linear-gradient(270deg, #8257E6, #6B3FBB, #3E1E91);
+      box-shadow: 0 0 10px #8257E6, 0 0 20px #6B3FBB, 0 0 30px #3E1E91;
+    }
+    100% {
+      border-image-source: linear-gradient(360deg, #8257E6, #6B3FBB, #3E1E91);
+      box-shadow: 0 0 10px #8257E6, 0 0 20px #6B3FBB, 0 0 30px #3E1E91;
+    }
+  }
+  
+  .animate-border-gradient {
+    animation: border-gradient 4s infinite linear;
+    border-image-slice: 1;
+    border-width: 8px;
+  }
+  
