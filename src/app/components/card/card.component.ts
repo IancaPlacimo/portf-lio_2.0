@@ -9,6 +9,5 @@ import { Component, Input } from '@angular/core';
 export class CardComponent {
   @Input() image: string = '';  
   @Input() text: string = ''; 
-  @Input() tooltip: string = ''; 
 
 }

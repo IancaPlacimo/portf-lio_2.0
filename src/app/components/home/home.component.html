@@ -45,12 +45,12 @@
         </div>
     </div>
 
-    <div >
-        <div class="min-h-screen flex flex-col items-center justify-start mt-20">
+    <div>
+        <div class="flex flex-col items-center justify-start mt-20">
             <section #scrollSection
                 class="section opacity-0 transform translate-x-100 transition-all duration-500 ease-out  w-full flex  flex-col justify-center items-center space-y-8">
                 <h2 class="text-3xl font-bold text-white mb-6">Habilidades</h2>
-                <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 justify-center  mx-auto ">
+                <div class=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4 justify-center  mx-auto ">
                     <app-card [image]="'../../../assets/img/html.png'" [text]="'HTML'" class="mb-4"></app-card>
                     <app-card [image]="'../../../assets/img/css.png'" [text]="'CSS'" class="mb-4"></app-card>
                     <app-card [image]="'../../../assets/img/js.png'" [text]="'JAVASCRIPT'" class="mb-4"></app-card>
@@ -59,8 +59,25 @@
                     <app-card [image]="'../../../assets/img/bootstrap.png'" [text]="'BOOTSTRAP'" class="mb-4"></app-card>
                     <app-card [image]="'../../../assets/img/tw.png'" [text]="'TAILWIND'" class="mb-4"></app-card>
                     <app-card [image]="'../../../assets/img/sass.png'" [text]="'SASS'" class="mb-4"></app-card>
-                    <app-card [image]="'../../../assets/img/sc.png'" [text]="'STYLED COMPONENTS'" class="mb-4"></app-card>
-                  </div>                 
+                    <app-card [image]="'../../../assets/img/sc.png'" [text]="'STYLED COMPONENTS'"
+                        class="mb-4"></app-card>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <div>
+        <div class=" flex flex-col items-center justify-start mt-10">
+            <section #scrollSection
+                class="section transform translate-x-100 transition-all duration-500 ease-out  w-full flex  flex-col justify-center items-center space-y-8">
+                <h2 class="text-3xl font-bold text-white mb-10">Projetos</h2>
+                <div
+                    class=" grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-10 p-6 justify-center mx-auto">
+                    <app-projeto [image]="'../../../assets/img/img-spotfy.PNG'" [text]="'Clone Spotfy'" ></app-projeto>
+                    <app-projeto [image]="'../../../assets/img/img-port.PNG'" [text]="'Portfólio'"></app-projeto>
+                    <app-projeto  [image]="'../../../assets/img/img-spotfy.PNG'" [text]="'Clone My Family Cinema'"></app-projeto>
+                </div>
             </section>
         </div>
     </div>

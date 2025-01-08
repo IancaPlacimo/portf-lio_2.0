@@ -1,11 +1,12 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 import { HeaderComponent } from "../header/header.component";
 import { CardComponent } from "../card/card.component";
+import { ProjetoComponent } from "../projeto/projeto.component";
 
 
 @Component({
   selector: 'app-home',
-  imports: [HeaderComponent, CardComponent],
+  imports: [HeaderComponent, CardComponent, ProjetoComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
