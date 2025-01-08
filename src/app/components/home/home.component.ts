@@ -14,7 +14,7 @@ import { isPlatformBrowser } from '@angular/common';
 })
 export class HomeComponent implements AfterViewInit {
   @ViewChild('scrollSection', { static: false }) scrollSection: ElementRef;
-  email: string = 'iancaplacimo@gmail.com';
+  email: string = 'iancaplacimovitor@gmail.com';
   git: string = '@iancaplacimo';
   estado: string = 'Download CV';
   texts: string[] = [

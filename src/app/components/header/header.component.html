@@ -6,15 +6,12 @@
             <span *ngIf="!menuOpen" class="bg-roxo h-1 w-6 rounded-full group-hover:bg-fundo"></span>
             <span *ngIf="menuOpen" class="text-roxo text-3xl ml-1 group-hover:bg-roxo group-hover:text-fundo">X</span>
         </button>
-        <h1 class="text-white font-bold">Portfólio</h1>
-        <button class="text-roxo">Dark</button>
+        <p class="text-roxo font-bold text-xl xl:text-4xl lg:text-4xl md:text-4xl mt-4 text-center">Bem-vindo(a) ao meu Portfólio </p>
+        <button class="text-transparent">......</button>
     </div>
 
     <nav *ngIf="menuOpen" class="menu absolute left-0 bg-fundo/90 backdrop-blur-sm z-50 w-full h-full border-b border-roxo">
         <ul class="space-y-2 w-full flex items-center flex-col">
-            <li class="w-ful mb-6">
-                <p class="text-roxo font-bold text-xl xl:text-4xl lg:text-4xl md:text-4xl">Bem-vindo(a) ao meu Portfólio :)</p>
-            </li>
             <li class="w-full"><a href="#sobremim" class="item" (click)="toggleMenu()">Sobre</a></li>
             <li class="w-full"><a href="#habilidades" class="item" (click)="toggleMenu()">Habilidades</a></li>
             <li class="w-full"><a href="#projetos" class="item" (click)="toggleMenu()">Projetos</a></li>

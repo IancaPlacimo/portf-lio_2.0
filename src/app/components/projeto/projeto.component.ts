@@ -9,5 +9,6 @@ import { Component, Input } from '@angular/core';
 export class ProjetoComponent {
    @Input() image: string = '';  
     @Input() text: string = ''; 
+    @Input() link: string = ''; 
 
 }

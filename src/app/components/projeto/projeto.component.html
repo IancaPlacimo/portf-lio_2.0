@@ -1,8 +1,11 @@
-<div class="projeto w-full sm:w-96 h-72 rounded-md overflow-hidden relative cursor-pointer group-hover:scale-110 group">
+
+<a [href]="link" target="_blank">
+  <div class="projeto w-full sm:w-96 h-72 rounded-md overflow-hidden relative cursor-pointer group-hover:scale-110 group">
     <img class="w-full h-[85%] rounded-sm overflow-hidden" [src]="image" style="border: 4px solid #8257E6">
     <div class="info w-full rounded-xl border-transparent absolute bottom-0 left-0p-4 transform translate-y-full transition-all duration-300 ease-in-out flex flex-row justify-between">
       <p class="text-white font-bold text-xl">{{text}}</p>
       <button class=" bg-roxo focus:outline-none py-2 px-2 rounded-full text-white font-semibold hover:bg-transparent hover:border-roxo hover:border">Github</button>
     </div>
   </div>
+</a>
   
