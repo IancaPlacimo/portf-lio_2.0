@@ -1,13 +1,13 @@
-<header class="flex items-center flex-col pl-4 pr-4 bg-fundo h-20 border-b border-roxo w-auto space-y-28">
-    <div class="flex justify-between items-center w-full">
+<header class="flex items-center justify-center flex-col pl-4 pr-4 bg-fundo h-20 border-b border-roxo w-auto space-y-28">
+    <div class="flex justify-center flex-row  md:justify-between items-center w-full">
         <button class="flex flex-col group hover:rounded-full hover:bg-roxo p-3 space-y-1" (click)="toggleMenu()">
             <span *ngIf="!menuOpen" class="bg-roxo rounded-full h-1 w-6 group-hover:bg-fundo"></span>
             <span *ngIf="!menuOpen" class="bg-roxo h-1 w-6 rounded-full group-hover:bg-fundo"></span>
             <span *ngIf="!menuOpen" class="bg-roxo h-1 w-6 rounded-full group-hover:bg-fundo"></span>
             <span *ngIf="menuOpen" class="text-roxo text-3xl ml-1 group-hover:bg-roxo group-hover:text-fundo">X</span>
         </button>
-        <p class="text-roxo font-bold text-xl xl:text-4xl lg:text-4xl md:text-4xl mt-4 text-center">Bem-vindo(a) ao meu Portfólio </p>
-        <button class="text-transparent">......</button>
+        <p class="text-roxo font-bold text-2xl xl:text-4xl lg:text-4xl md:text-4xl text-center">Bem-vindo(a) ao meu Portfólio </p>
+        <button class="text-transparent ">......</button>
     </div>
 
     <nav *ngIf="menuOpen" class="menu absolute left-0 bg-fundo/90 backdrop-blur-sm z-50 w-full h-full border-b border-roxo">
