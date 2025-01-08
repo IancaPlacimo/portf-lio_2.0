@@ -1,6 +1,6 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import {DOCUMENT} from "@angular/common"
 
 @Component({
@@ -11,7 +11,12 @@ import {DOCUMENT} from "@angular/common"
 })
 export class AppComponent {
   constructor(@Inject(DOCUMENT) document:Document){
-    document.defaultView 
+    document.defaultView ;
+
+
 }
+
   title = 'Ianca Placimo';
+
+  
 }

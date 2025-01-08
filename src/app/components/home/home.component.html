@@ -1,16 +1,16 @@
 <div class="h-screen w-auto   flex flex-col space-y-8">
     <app-header></app-header>
     <div class="w-full flex flex-col justify-center items-center xl:flex-row lg:flex-row md:flex-row ">
-        <div class=" w-2/4 flex flex-col justify-between">
+        <div class=" w-2/4 flex flex-col justify-between" id="home">
             <h1 class="sm:mt-4 xl:text-5xl lg:text-5xl md:text-5xl text-roxo text-left flex flex-col items-center">
                 <span class="text-white mb-4">Olá! eu sou a <br></span> Ianca Placimo
                 <br>
-                <span class="text-gray-500 text-2xl">Desenvolvedora Front-End</span>
+                <span class="text-gray-500 text-2xl">Desenvolvedora <span class="text-roxo">{{currentText}}</span></span>
             </h1>
 
             <div class="flex flex-row  w-full justify-center items-center text-white space-x-24 mt-4">
-                <button class=" download focus:outline-none">Download CV</button>
-                <button class=" download focus:outline-none">Entre em contato</button>
+                <button class=" download focus:outline-none" (click)="download()">{{estado}}</button>
+                <button class=" download focus:outline-none"><a href="#contato">Entre em contato</a></button>
             </div>
         </div>
 
@@ -19,7 +19,7 @@
         </div>
     </div>
 
-    <div class="flex justify-center items-center flex-col space-x-4 ">
+    <div class="flex justify-center items-center flex-col space-x-4 " id="sobremim">
         <p class="text-white font-bold text-4xl">Sobre mim</p>
         <div class=" p-6 rounded-lg shadow-md max-w-3xl mx-auto text-gray-300">
             <p class="mb-4 text-2xl text-center">
@@ -46,17 +46,19 @@
     </div>
 
     <div>
-        <div class="flex flex-col items-center justify-start mt-20">
+        <div class="flex flex-col items-center justify-start mt-20" id="habilidades">
             <section #scrollSection
                 class="section opacity-0 transform translate-x-100 transition-all duration-500 ease-out  w-full flex  flex-col justify-center items-center space-y-8">
                 <h2 class="text-3xl font-bold text-white mb-6">Habilidades</h2>
-                <div class=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4 justify-center  mx-auto ">
+                <div
+                    class=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4 justify-center  mx-auto ">
                     <app-card [image]="'../../../assets/img/html.png'" [text]="'HTML'" class="mb-4"></app-card>
                     <app-card [image]="'../../../assets/img/css.png'" [text]="'CSS'" class="mb-4"></app-card>
                     <app-card [image]="'../../../assets/img/js.png'" [text]="'JAVASCRIPT'" class="mb-4"></app-card>
                     <app-card [image]="'../../../assets/img/ts.png'" [text]="'TYPESCRIPT'" class="mb-4"></app-card>
                     <app-card [image]="'../../../assets/img/angular.png'" [text]="'ANGULAR'" class="mb-4"></app-card>
-                    <app-card [image]="'../../../assets/img/bootstrap.png'" [text]="'BOOTSTRAP'" class="mb-4"></app-card>
+                    <app-card [image]="'../../../assets/img/bootstrap.png'" [text]="'BOOTSTRAP'"
+                        class="mb-4"></app-card>
                     <app-card [image]="'../../../assets/img/tw.png'" [text]="'TAILWIND'" class="mb-4"></app-card>
                     <app-card [image]="'../../../assets/img/sass.png'" [text]="'SASS'" class="mb-4"></app-card>
                     <app-card [image]="'../../../assets/img/sc.png'" [text]="'STYLED COMPONENTS'"
@@ -68,18 +70,115 @@
 
 
     <div>
-        <div class=" flex flex-col items-center justify-start mt-10">
+        <div class=" flex flex-col items-center justify-start mt-10" id="projetos">
             <section #scrollSection
                 class="section transform translate-x-100 transition-all duration-500 ease-out  w-full flex  flex-col justify-center items-center space-y-8">
                 <h2 class="text-3xl font-bold text-white mb-10">Projetos</h2>
                 <div
                     class=" grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-10 p-6 justify-center mx-auto">
-                    <app-projeto [image]="'../../../assets/img/img-spotfy.PNG'" [text]="'Clone Spotfy'" ></app-projeto>
+                    <app-projeto [image]="'../../../assets/img/img-spotfy.PNG'" [text]="'Clone Spotfy'"></app-projeto>
                     <app-projeto [image]="'../../../assets/img/img-port.PNG'" [text]="'Portfólio'"></app-projeto>
-                    <app-projeto  [image]="'../../../assets/img/img-spotfy.PNG'" [text]="'Clone My Family Cinema'"></app-projeto>
+                    <app-projeto [image]="'../../../assets/img/img-spotfy.PNG'"
+                        [text]="'Clone My Family Cinema'"></app-projeto>
                 </div>
             </section>
         </div>
     </div>
 
+
+    <div>
+        <div class=" flex flex-col items-center justify-start mt-10" id="contato">
+            <section #scrollSection
+                class="section transform translate-x-100 transition-all duration-500 ease-out  w-full flex  flex-col justify-center items-center space-y-8">
+                <h2 class="text-3xl font-bold text-white mb-10">Contatos</h2>
+                <div
+                    class=" grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 p-6 justify-center mx-auto">
+                    <div class="flex flex-col justify-center items-center space-y-2">
+                        <div class="bg-fosco py-4 px-4 rounded-full" alt="">
+                            <svg class="h-12 w-12 text-roxo" data-slot="icon" fill="none" stroke-width="1.5"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75">
+                                </path>
+                            </svg>
+                        </div>
+                        <p class="text-white font-semibold text-xl">E-mail</p>
+                        <p class="text-white">{{email}}</p>
+                    </div>
+
+                    <div class="flex flex-col justify-center items-center space-y-2">
+                        <div class="bg-fosco py-4 px-4 rounded-full" alt="">
+                            <svg class="h-12 w-12 text-roxo" data-slot="icon" fill="none" stroke-width="1.5"
+                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <p class="text-white font-semibold text-xl">Celular</p>
+                        <p class="text-white">(11) 98539-0694</p>
+                    </div>
+                    <a href="https://www.linkedin.com/in/iancaplacimo/" target="_blank">
+                        <div class="flex flex-col justify-center items-center space-y-2 cursor-pointer">
+
+                            <div class="bg-fosco py-4 px-4 rounded-full" alt="">
+                                <svg class="h-12 w-12" fill="#8257E6" height="200px" width="200px" version="1.1"
+                                    id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 310 310"
+                                    xml:space="preserve" stroke="#8257E6">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <g id="XMLID_801_">
+                                            <path id="XMLID_802_"
+                                                d="M72.16,99.73H9.927c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5H72.16c2.762,0,5-2.238,5-5V104.73 C77.16,101.969,74.922,99.73,72.16,99.73z">
+                                            </path>
+                                            <path id="XMLID_803_"
+                                                d="M41.066,0.341C18.422,0.341,0,18.743,0,41.362C0,63.991,18.422,82.4,41.066,82.4 c22.626,0,41.033-18.41,41.033-41.038C82.1,18.743,63.692,0.341,41.066,0.341z">
+                                            </path>
+                                            <path id="XMLID_804_"
+                                                d="M230.454,94.761c-24.995,0-43.472,10.745-54.679,22.954V104.73c0-2.761-2.238-5-5-5h-59.599 c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5h62.097c2.762,0,5-2.238,5-5v-98.918c0-33.333,9.054-46.319,32.29-46.319 c25.306,0,27.317,20.818,27.317,48.034v97.204c0,2.762,2.238,5,5,5H305c2.762,0,5-2.238,5-5V194.995 C310,145.43,300.549,94.761,230.454,94.761z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <p class="text-white font-semibold text-xl ">Likedin</p>
+                            <p class="text-white">
+                                linkedin.com/in/iancaplacimo
+                            </p>
+
+                        </div>
+                    </a>
+
+                    <div class="flex flex-col justify-center items-center space-y-2">
+                        <div class="bg-fosco py-4 px-4 rounded-full" alt="">
+                            <svg class="h-12 w-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M9.29183 21V18.4407L9.3255 16.6219C9.36595 16.0561 9.58639 15.5228 9.94907 15.11C9.95438 15.1039 9.95972 15.0979 9.9651 15.0919C9.9791 15.0763 9.96988 15.0511 9.94907 15.0485V15.0485C7.52554 14.746 5.0005 13.7227 5.0005 9.26749C4.9847 8.17021 5.3427 7.10648 6.00437 6.27215C6.02752 6.24297 6.05103 6.21406 6.07492 6.18545V6.18545C6.10601 6.1482 6.11618 6.09772 6.10194 6.05134C6.10107 6.04853 6.10021 6.04571 6.09935 6.04289C6.0832 5.9899 6.06804 5.93666 6.05388 5.88321C5.81065 4.96474 5.86295 3.98363 6.20527 3.09818C6.20779 3.09164 6.21034 3.08511 6.2129 3.07858C6.22568 3.04599 6.25251 3.02108 6.28698 3.01493V3.01493C6.50189 2.97661 7.37036 2.92534 9.03298 4.07346C9.08473 4.10919 9.13724 4.14609 9.19053 4.18418V4.18418C9.22901 4.21168 9.27794 4.22011 9.32344 4.20716C9.32487 4.20675 9.32631 4.20634 9.32774 4.20593C9.41699 4.18056 9.50648 4.15649 9.59617 4.1337C11.1766 3.73226 12.8234 3.73226 14.4038 4.1337C14.4889 4.1553 14.5737 4.17807 14.6584 4.20199C14.6602 4.20252 14.6621 4.20304 14.6639 4.20356C14.7174 4.21872 14.7749 4.20882 14.8202 4.17653V4.17653C14.8698 4.14114 14.9187 4.10679 14.967 4.07346C16.6257 2.92776 17.4894 2.9764 17.7053 3.01469V3.01469C17.7404 3.02092 17.7678 3.04628 17.781 3.07946C17.7827 3.08373 17.7843 3.08799 17.786 3.09226C18.1341 3.97811 18.1894 4.96214 17.946 5.88321C17.9315 5.93811 17.9159 5.9928 17.8993 6.04723V6.04723C17.8843 6.09618 17.8951 6.14942 17.9278 6.18875C17.9289 6.18998 17.9299 6.19121 17.9309 6.19245C17.9528 6.21877 17.9744 6.24534 17.9956 6.27215C18.6573 7.10648 19.0153 8.17021 18.9995 9.26749C18.9995 13.747 16.4565 14.7435 14.0214 15.015V15.015C14.0073 15.0165 14.001 15.0334 14.0105 15.0439C14.0141 15.0479 14.0178 15.0519 14.0214 15.0559C14.2671 15.3296 14.4577 15.6544 14.5811 16.0103C14.7101 16.3824 14.7626 16.7797 14.7351 17.1754V21"
+                                        stroke="#8257E6" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path
+                                        d="M4 17C4.36915 17.0523 4.72159 17.1883 5.03065 17.3975C5.3397 17.6068 5.59726 17.8838 5.7838 18.2078C5.94231 18.4962 6.15601 18.7504 6.41264 18.9557C6.66927 19.161 6.96379 19.3135 7.27929 19.4043C7.59478 19.4952 7.92504 19.5226 8.25112 19.485C8.5772 19.4475 8.89268 19.3457 9.17946 19.1855"
+                                        stroke="#8257E6" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </g>
+                            </svg>
+                        </div>
+                        <p class="text-white font-semibold text-xl ">Github</p>
+                        <p class="text-white">{{git}}</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="w-full flex justify-center items-end py-2 px-2 bg-fosco">
+        <p class="text-white p-4">Ianca Placimo<sup style="font-size:10px;">©</sup> 2025 - Todos os direitos reservados.
+        </p>
+    </div>
 </div>
